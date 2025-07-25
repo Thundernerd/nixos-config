@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 
 {
+    nixpkgs.config.allowUnfree = true;
+
     environment.systemPackages = with pkgs; [
         brave
         discord
@@ -10,5 +12,6 @@
         wineWowPackages.stable
         winetricks
         protontricks
+        mc
     ]
 }
