@@ -13,5 +13,5 @@
         winetricks
         protontricks
         mc
-    ]
+    ];
 }
