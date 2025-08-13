@@ -75,12 +75,17 @@
     winetricks
     protontricks
     dotnet-sdk
-    unstable-packages.unityhub
+    unityhub
     jetbrains.rider
+    vscode
+    avalonia-ilspy
   ];
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
+
+  # Explicitly disable firefox
+  programs.firefox.enable = false;
   
   programs.git.enable = true;
   programs.git.userName = "Christiaan Bloemendaal";
