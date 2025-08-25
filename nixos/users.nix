@@ -1,12 +1,4 @@
-{
-  inputs,
-  outputs,
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
-
+{...}: {
   users.users = {
     christiaan = {
       initialPassword = "password";
@@ -14,5 +6,4 @@
       extraGroups = ["networkmanager" "wheel"];
     };
   };
-
 }

@@ -1,10 +1,7 @@
 # This is your home-manager configuration file
 # Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
 {
-  inputs,
   outputs,
-  lib,
-  config,
   pkgs,
   ...
 }: {
@@ -72,12 +69,22 @@
     proton-pass
     vivaldi
     steam
-    winetricks
     protontricks
     dotnet-sdk
     unityhub
     jetbrains.rider
     vscode
+    avalonia-ilspy
+    alejandra
+    nixd
+    nil
+    protonplus
+    gnome-boxes
+    cider-2
+    nodejs
+    feishin
+    nextcloud-client
+    gitui
     avalonia-ilspy
   ];
 
@@ -86,13 +93,22 @@
 
   # Explicitly disable firefox
   programs.firefox.enable = false;
-  
+
   programs.git.enable = true;
   programs.git.userName = "Christiaan Bloemendaal";
   programs.git.userEmail = "github@tnrd.net";
 
   programs.bash.enable = true;
   programs.bash.enableCompletion = true;
+
+  programs.ssh = {
+    enable = true;
+    extraConfig = ''
+      Host *
+        IdentityAgent ~/.1password/agent.sock
+
+    '';
+  };
 
   home.sessionVariables = {
     WEBKIT_DISABLE_COMPOSITING_MODE = 1;

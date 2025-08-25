@@ -22,8 +22,10 @@
     ./audio.nix
     ./graphics.nix
     ./locale.nix
+    ./packages.nix
     ./programs.nix
     ./users.nix
+    ./virtualization.nix
     ./x11.nix
 
     # Import your generated (nixos-generate-config) hardware configuration

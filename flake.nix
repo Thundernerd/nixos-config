@@ -7,12 +7,14 @@
 
     home-manager.url = "github:nix-community/home-manager/release-25.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    alejandra.url = "github:kamadorueda/alejandra/4.0.0";
+    alejandra.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = {
     self,
     nixpkgs,
-    nixpkgs-unstable,
     home-manager,
     ...
   } @ inputs: let

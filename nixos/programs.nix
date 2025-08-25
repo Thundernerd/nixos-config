@@ -1,12 +1,4 @@
-{
-  inputs,
-  outputs,
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
-
+{...}: {
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
@@ -17,4 +9,9 @@
   # enable Firefox by default
   programs.firefox.enable = true;
 
+  programs._1password-gui = {
+    polkitPolicyOwners = ["christiaan"];
+  };
+
+  programs.partition-manager.enable = true;
 }
